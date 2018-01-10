@@ -1,0 +1,14 @@
+Create Another Class Extending Fragment Class
+	-	override onCreateView() method
+	-	use inflater to inflate the layout from the resources
+			
+			inflater.inflate(R.layout.fragment_main, container, false);
+			
+In Main Activity Layout
+	-	Add FrameLayout to MainLayout
+	-	create object of created Fragment
+			
+        	firstFragement firstFrag = new firstFragement();
+        	
+    -	 add object of Fragment to FrameLayout created in the Main Activity Layout
+    		getFragmentManager().beginTransaction().add(R.id.fragment1, firstFrag).commit(); 

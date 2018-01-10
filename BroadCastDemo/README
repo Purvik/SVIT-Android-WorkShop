@@ -1,0 +1,8 @@
+
+	-	Create Intent with appropriate Actions
+	-	Create Receiver extending BroadCastReceiver Class
+	-	Register Receiver in the AndroidManifest.xml file
+		- ad intent-filter and actions that specified in the Actions that handle with this Receiver
+	-	in Receiver override onReceive() method for individual actions
+		- intent.getAction() .equalsIgnoreCase("	//action name ges here	")
+		 

@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.purvik.recording.MainActivity" >
+    
+    <Button
+        android:id="@+id/btn_Record"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvMessage"
+        android:layout_alignBottom="@+id/tvMessage"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="65dp"
+        android:text="@string/btn_Record" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="49dp"
+        android:layout_toLeftOf="@+id/btn_Record"
+        android:text="@string/Msg_btn_Press" />
+
+    <Button
+        android:id="@+id/btn_Play"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btn_Record"
+        android:layout_below="@+id/btn_Record"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/tvMessage"
+        android:text="@string/btnPlay" />
+
+    <TextView
+        android:id="@+id/tvMsgPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_Play"
+        android:layout_alignBottom="@+id/btn_Play"
+        android:layout_alignRight="@+id/tvMessage"
+        android:text="@string/PlayMessage" />
+    
+    
+
+</RelativeLayout>

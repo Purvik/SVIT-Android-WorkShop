@@ -1,0 +1,57 @@
+@PURVIK RANA : Android Recorder 
+
+1...	Declare Object of MediaRecorder and MediaPlayer Class...
+	MediaRecorder mRecorder;
+	MediaPLayer mPlayer;
+	
+2...	Set Output File Path:
+
+	outPath = Environment.getExternalStorageDirectory().getAbsolutePath()+"/recording.mp3";
+
+3...	Create Objects of MediaRecorder and MediaPlayer Class
+	mRecorder = new MediaRecorder();
+ 	mPlayer = new MediaPlayer();
+ 	
+4...	Specify the Parameters for MediaRecorder
+
+		//set Audio Source
+      	mRecorder.setAudioSource(MediaRecorder.AudioSource.DEFAULT);
+      		
+      	//set Output Format
+      	mRecorder.setOutputFormat(MediaRecorder.OutputFormat.DEFAULT);
+      		
+      	//Set Audio Recorder
+      	mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.DEFAULT);
+      		
+      	//Set Output File 
+      	mRecorder.setOutputFile(outPath);
+      	
+5...	ACTION_DOWN MotionEvent of btnRecord.setOnTouchListener()
+
+	//Prepare Recorder
+	mRecorder.prepare();
+	
+	//Start mRecorder
+	mRecorder.start();
+	
+	ACTION_UP Event
+	
+	mRecorder.stop();
+	mRecorder.release();
+	
+6...	ACTION_DOWN MotionEvent of btnPlay.setOnTouchListener()
+
+	//Prepare Recorder
+	mPlayer.setDataSource(outPath);
+	mPlayer.prepare();
+    
+    
+	//Start mRecorder
+	mPLayer.start();
+	
+	ACTION_UP Event
+	
+	mPlayer.stop();
+	mPlayer.release();
+	
+7... DONE
